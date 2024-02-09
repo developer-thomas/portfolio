@@ -1,0 +1,135 @@
+@import '../../scss-config/variables.scss';
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+#body-section {
+  background-color: $primary-color;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: wrap row;
+
+  width: 100vw;
+  
+  
+}
+
+.intro-container__text {
+  color: white;
+  height: 300px;
+  width: 49vw;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: rem-calc(90);
+    padding: rem-calc(10);
+  } 
+
+  p {
+    font-size: rem-calc(30);
+    padding: rem-calc(10);
+  }
+
+  &__networks {   
+    margin-top: rem-calc(20);
+
+    display: grid;
+    grid-template-columns: repeat(3, rem-calc(80));
+    grid-template-rows: rem-calc(70);
+    gap: rem-calc(60);
+
+
+    // animation border
+    height: 100%;
+    place-items: center;
+
+    a {
+      border: 1px solid white;
+      border-radius: 15px;
+      background-color: $secondary-color;
+
+      // border animation 
+      width: rem-calc(80);
+      height: rem-calc(70);
+      display: grid;
+      place-content: center;
+      color: white;
+      text-shadow: 0 1px 0 #000;
+  
+      --border-angle: 0turn; 
+      --main-bg: conic-gradient(
+          from var(--border-angle),
+          #213,
+          #112 5%,
+          #112 60%,
+          #213 95%
+        );
+  
+      border: solid rem-calc(2) transparent;
+      border-radius: rem-calc(15);
+      --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+  
+      background: 
+        var(--main-bg) padding-box,
+        var(--gradient-border) border-box, 
+        var(--main-bg) border-box;
+  
+      background-position: center center;
+
+      animation: bg-spin 3s linear infinite;
+
+      @keyframes bg-spin {
+        to {
+          --border-angle: 1turn;
+        }
+      }
+
+      &:hover {
+        animation-play-state: running;
+      }
+
+      img {
+        width: rem-calc(40);
+      }
+    }
+  }
+}
+
+
+
+      
+
+
+
+
+.intro-container__img {
+  width: 49vw;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.intro-container__img img {
+  // height: 32.3%;
+  // width: 32.3%;
+  height: 80.3%;
+  width: 65.3%;
+  right: 1%;
+}

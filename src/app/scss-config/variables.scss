@@ -1,0 +1,8 @@
+@function rem-calc($size) {
+  $value: calc($size / 16);
+  @return #{$value}rem;
+  
+  };
+
+$primary-color: #030303;
+$secondary-color: #292828;
