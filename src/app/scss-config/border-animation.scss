@@ -1,9 +1,17 @@
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
 @mixin border-animation-mixin($secondary-color) {
   border: 1px solid white;
   border-radius: 15px;
   background-color: $secondary-color;
-  width: rem-calc(80);
-  height: rem-calc(70);
+  width: 4vw;
+  height: 8vh;
+  min-width: rem-calc(43);
+  min-height: rem-calc(53);
   display: grid;
   place-content: center;
   color: white;
