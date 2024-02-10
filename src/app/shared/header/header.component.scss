@@ -1,14 +1,88 @@
+@import '../../scss-config/variables.scss';
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .navbar {
   color: white;
   position: fixed;
-  
 }
+
+
+li {
+  padding: 10px;
+}
+
 a {
   color: white;
+  font-family: 'Cormorant Garamond', serif;
+  text-decoration: none;
+	color: white;
+	font-weight: 700;
+	vertical-align: top;
+  
+  text-justify: start;
+
+  &:focus{
+    color: white;
+  }
+ 
 }
 
 .navbar-toggler .navbar-toggler-div{
   color: white;
   height: 3px;
   width: 3px;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  align-self: center;
+  justify-self: center;
+
+  position: relative;
+  animation: floatAnimation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+
+
+.li-hover {
+  position: relative;
+  font-weight: bold;
+	
+	&::before {
+		content: '';
+		background-color: gold;
+		position: absolute;
+		left: rem-calc(18);
+		bottom: 4px;
+		width: 5px;
+		height: 2px;
+		z-index: -1;
+		transition: all .3s ease-in-out;
+    
+	}
+	
+	&:hover::before {
+		left: -5px;
+		bottom: 0;
+		height: 100%;
+		width: calc(100% + 10px);
+	}	
 }
