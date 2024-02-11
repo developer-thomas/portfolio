@@ -42,6 +42,7 @@
   h1 {
     font-size: 5vw;
     padding: rem-calc(10);
+    color: gold;
   } 
 
   p {
@@ -76,7 +77,7 @@
 .intro-container__img {
   width: rem-calc(645);
   height: 100%;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
