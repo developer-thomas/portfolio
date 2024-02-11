@@ -1,0 +1,88 @@
+@import '../../scss-config/variables.scss';
+* {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 800;
+}
+
+#vanta {
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  z-index: -1;
+}
+
+.about-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 70vw;
+
+  .btn-container {
+    width: 100%;
+    margin: 0 auto;
+
+    button {
+      padding: rem-calc(15);
+      width: rem-calc(300);
+      margin: rem-calc(25) 2%;
+    }
+  }
+}
+
+.about-container__content{
+  width: rem-calc(500);
+  height: 80%;
+
+  margin-top: 7%;
+  
+  color: white;
+
+  position: relative;
+}
+
+.about-container__content-top {
+  h1 {
+    font-size: rem-calc(80);
+    color: gold;
+  }
+
+  h3 {
+    font-size: rem-calc(170);
+    position: absolute;
+    top: 0;
+    left: 8%;
+    color: #312c2c;
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+  p.resume {
+    margin-top: rem-calc(20);
+    margin-left: 2%;
+    line-height: 30px;
+    font-size: rem-calc(20);
+  }
+
+  &-top {
+    margin-top: 15%;
+  }
+
+}
+  
+
+.about-container__content-info {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+  margin-top:rem-calc(30);
+
+    p {
+      font-size: rem-calc(20);
+      margin-left: 2%;
+      padding: rem-calc(10);
+      margin-top: rem-calc(8);
+    }
+ 
+  }
