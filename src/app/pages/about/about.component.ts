@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
       scale: 1.00,
       scaleMobile: 1.00,
       showLines: false,
-      backgroundColor: 0
+      backgroundColor: 0    
     })
   }
 
