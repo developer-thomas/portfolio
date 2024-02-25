@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant+Garamond:wght@300&display=swap');
 @function rem-calc($size) {
   $value: calc($size / 16);
   @return #{$value}rem;
@@ -6,3 +8,5 @@
 
 $primary-color: #030303;
 $secondary-color: #292828;
+
+
