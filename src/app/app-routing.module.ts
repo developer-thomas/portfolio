@@ -5,13 +5,13 @@ import { AboutComponent } from './pages/about/about.component';
 import { HabilidadesComponent } from './pages/habilidades/habilidades.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full'},
-  { path: 'sobre', component: AboutComponent, pathMatch: 'full' },
-  { path: 'hardskills', component: HabilidadesComponent, pathMatch: 'full' }
+  // { path: '', component: HomeComponent, pathMatch: 'full' },
+  // { path: 'sobre', component: AboutComponent, pathMatch: 'full' },
+  // { path: 'hardskills', component: HabilidadesComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
