@@ -1,0 +1,47 @@
+[
+  {
+    "title": "HTML5",
+    "description": "Linguagem de Marcação",
+    "icon": "/assets/skills/html5.png"
+  },
+  {
+    "title": "CSS3",
+    "description": "Linguagem de Estilização",
+    "icon": "/assets/skills/css.png"
+  },
+  {
+    "title": "Javascript",
+    "description": "Linguagem de Programação",
+    "icon": "/assets/skills/js.png"
+  },
+  {
+    "title": "Typescript",
+    "description": "Linguagem de Programação",
+    "icon": "/assets/skills/typescript.png"
+  },
+  {
+    "title": "Tailwind",
+    "description": "Framework Css",
+    "icon": "/assets/skills/tailwind.png"
+  },
+  {
+    "title": "Sass",
+    "description": "Linguagem de Estilização",
+    "icon": "/assets/skills/sass.png"
+  },
+  {
+    "title": "Bootstrap",
+    "description": "Framework Css",
+    "icon": "/assets/skills/bootstrap.png"
+  },
+  {
+    "title": "Angular",
+    "description": "Framework Front End",
+    "icon": "/assets/skills/angular.png"
+  },
+  {
+    "title": "Git",
+    "description": "Ferramento de Versionamento",
+    "icon": "/assets/skills/git.png"
+  }
+]
