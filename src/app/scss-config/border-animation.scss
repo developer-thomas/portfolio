@@ -10,31 +10,35 @@
   background-color: $secondary-color;
   width: 4vw;
   height: 8vh;
-  min-width: rem-calc(43);
+  min-width: rem-calc(65);
   min-height: rem-calc(53);
   display: grid;
   place-content: center;
   color: white;
   text-shadow: 0 1px 0 #000;
-  
-  --border-angle: 0turn; 
+
+  --border-angle: 0turn;
   --main-bg: conic-gradient(
-      from var(--border-angle),
-      #213,
-      #112 5%,
-      #112 60%,
-      #213 95%
-    );
-  
+    from var(--border-angle),
+    rgb(120, 14, 226),
+    #112 5%,
+    #112 60%,
+    #213 95%
+  );
+
   border: solid rem-calc(2) transparent;
   border-radius: rem-calc(15);
-  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
-  
-  background: 
-    var(--main-bg) padding-box,
-    var(--gradient-border) border-box, 
+  --gradient-border: conic-gradient(
+    from var(--border-angle),
+    transparent 25%,
+    #08f,
+    #f03 99%,
+    transparent
+  );
+
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box,
     var(--main-bg) border-box;
-  
+
   background-position: center center;
 
   animation: bg-spin 3s linear infinite;
