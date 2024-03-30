@@ -1,11 +1,10 @@
-@import '../../scss-config/variables.scss';
-
+@import "../../scss-config/variables.scss";
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   z-index: 9;
 }
@@ -15,32 +14,23 @@
   position: fixed;
 }
 
-
 li {
   padding: 10px;
 }
 
 a {
   color: white;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   text-decoration: none;
-	color: white;
-	font-weight: 700;
-	vertical-align: top;
-  
+  color: white;
+  font-weight: 700;
+  vertical-align: top;
+
   text-justify: start;
 
-  &:focus{
+  &:focus {
     color: gold;
-    
   }
- 
-}
-
-.navbar-toggler .navbar-toggler-div{
-  color: white;
-  height: 3px;
-  width: 3px;
 }
 
 .logo-img {
@@ -49,7 +39,6 @@ a {
   align-self: center;
   justify-self: center;
 
-  position: relative;
   animation: floatAnimation 1.5s ease-in-out infinite alternate;
 }
 
@@ -61,30 +50,56 @@ a {
     transform: translateY(5px);
   }
 }
+// TO MEXENDO AQUI
+.container-fluid {
+  position: relative;
+}
 
+.navbar-container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
 
+  .toggle-icon-img {
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+  }
+  .navbar-toggler {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.navbar-collapse {
+  position: absolute;
+  right: 10px;
+  top: 80%;
+}
 
 .li-hover {
   position: relative;
   font-weight: bold;
-	
-	&::before {
-		content: '';
-		background-color: gold;
-		position: absolute;
-		left: rem-calc(18);
-		bottom: 4px;
-		width: 5px;
-		height: 2px;
-		z-index: -1;
-		transition: all .3s ease-in-out;
-    
-	}
-	
-	&:hover::before {
-		left: -5px;
-		bottom: 0;
-		height: 100%;
-		width: calc(100% + 10px);
-	}	
+
+  &::before {
+    content: "";
+    background-color: gold;
+    position: absolute;
+    left: rem-calc(18);
+    bottom: 4px;
+    width: 5px;
+    height: 2px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    left: -5px;
+    bottom: 0;
+    height: 100%;
+    width: calc(100% + 10px);
+  }
 }
