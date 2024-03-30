@@ -1,0 +1,30 @@
+@media (max-width: 575px) {
+  .container-fluid {
+    position: relative;
+  }
+
+  .navbar-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .toggle-icon-img {
+      height: 30px;
+      margin: 0;
+      padding: 0;
+      width: 30px;
+    }
+    .navbar-toggler {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    right: 10px;
+    top: 80%;
+  }
+}
