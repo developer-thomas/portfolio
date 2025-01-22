@@ -1,0 +1,80 @@
+@use "../../scss-config/variables.scss" as variables;
+
+.clipped {
+  position: relative;
+}
+
+.topnav-container {
+  position: absolute;
+  top: 10px;
+  z-index: 11;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-name img {
+  width: 60%;
+  max-height: 10%;
+}
+
+.links-list {
+  width: 800px;
+  height: 48px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  clip-path: polygon(0 0, 98% 0, 100% 23%, 100% 100%, 2% 100%, 0 80%);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid variables.$border-color;
+
+  &::before {
+    content: "";
+    left: 0;
+    position: absolute;
+    bottom: -8px;
+
+    border-bottom: 18px solid variables.$border-color;
+    border-right: 29px solid transparent;
+  }
+
+  &::after {
+    content: "";
+    right: 0;
+    position: absolute;
+    top: -9px;
+
+    border-top: 20px solid variables.$border-color;
+    border-left: 29px solid transparent;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      padding: 25px;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: variables.$border-color;
+        color: black;
+      }
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.toggle {
+  display: none;
+}

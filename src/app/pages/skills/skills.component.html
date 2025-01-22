@@ -1,0 +1,20 @@
+<section class="skills-section">
+  <div class="skills-section__intro">
+    <h1>Habilidades Técnicas</h1>
+    <span></span>
+  </div>
+  <div class="skills-section__skill">
+    @for (item of skills; track item.title) {
+    <div>
+      <div class="top-separator"></div>
+      <img src="{{ item.icon }}" alt="{{ item.title }}" />
+      <div class="bottom-separator"></div>
+    </div>
+    }
+  </div>
+  <img
+    class="bottom-detail"
+    src="../.././../assets/details/bottom-detail.svg"
+    alt=""
+  />
+</section>

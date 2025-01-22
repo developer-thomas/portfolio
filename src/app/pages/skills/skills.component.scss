@@ -1,0 +1,151 @@
+@use "../../scss-config/variables.scss" as variables;
+
+.skills-section {
+  height: 100%;
+  width: 100%;
+
+  background-color: #000;
+  background-image: radial-gradient(#414141 2px, transparent 1px);
+  background-size: 70px 70px;
+  background-position: -5px -5px;
+
+  position: relative;
+
+  &::before {
+    background: linear-gradient(180deg, #000, transparent);
+    top: 0;
+    height: 302px;
+    content: "";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .bottom-detail {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+  }
+}
+
+.skills-section__intro {
+  height: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  h1 {
+    color: gold;
+    margin-bottom: 35px;
+    position: relative;
+    font-size: variables.rem-calc(55);
+    z-index: 10;
+  }
+  span {
+    height: 1px;
+    background-color: white;
+    width: 100px;
+  }
+}
+
+.skills-section__skill {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5% 0;
+  overflow-y: hidden;
+  gap: 50px;
+
+  div {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: variables.rem-calc(10);
+    position: relative;
+
+    .top-separator {
+      position: absolute;
+      top: 0px;
+      background-image: linear-gradient(
+          90deg,
+          gold 28px,
+          transparent 0,
+          transparent calc(65%),
+          gold calc(50% - 14px),
+          gold calc(50% + 14px),
+          transparent calc(50% + 14px),
+          transparent calc(100% - 28px),
+          gold calc(100% - 28px),
+          gold
+        ),
+        linear-gradient(
+          90deg,
+          gold 2px,
+          transparent 0,
+          transparent calc(50% - 1px),
+          gold calc(50% - 1px),
+          gold calc(0% + 1px),
+          transparent calc(0% + 1px),
+          transparent calc(100% - 2px),
+          gold calc(100% - 2px),
+          gold
+        );
+      background-repeat: no-repeat;
+      background-size: 100% 2px, 100% 28px;
+
+      height: 5px;
+      width: 100%;
+    }
+
+    .bottom-separator {
+      bottom: 0px;
+      position: absolute;
+      background-image: linear-gradient(
+          90deg,
+          gold 28px,
+          transparent 0,
+          transparent calc(65%),
+          gold calc(50% - 14px),
+          gold calc(50% + 14px),
+          transparent calc(50% + 14px),
+          transparent calc(100% - 28px),
+          gold calc(100% - 28px),
+          gold
+        ),
+        linear-gradient(
+          90deg,
+          gold 2px,
+          transparent 0,
+          transparent calc(50% - 1px),
+          gold calc(50% - 1px),
+          gold calc(0% + 1px),
+          transparent calc(0% + 1px),
+          transparent calc(100% - 2px),
+          gold calc(100% - 2px),
+          gold
+        );
+      background-repeat: no-repeat;
+      background-size: 100% 2px, 100% 28px;
+
+      height: 5px;
+      width: 100%;
+
+      transform: rotate(180deg);
+      z-index: 12;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+    }
+  }
+}
